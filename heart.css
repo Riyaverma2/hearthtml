@@ -1,0 +1,41 @@
+.myheart{
+    height:200px;
+    width:200px;
+    background-color:red;
+    margin:100px;
+    transform:rotate(-150deg);
+    position:relative; 
+    animation: heartbeat 1s infinite;
+}
+.myheart::after,
+.myheart::before
+{
+content:'';
+height:200px;
+width:200px;
+background-color:red;
+border-radius:50%;
+position:absolute;
+}
+.myheart::before{
+   
+    top: 0;
+    left: -95px;
+}
+.myheart::after{
+    
+    top:-95px;
+    right:0;
+}
+
+@keyframes heartbeat{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
